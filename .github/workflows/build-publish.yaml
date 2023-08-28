@@ -34,7 +34,7 @@ jobs:
           password: ${{ secrets.AZURE_PASSWORD }}
 
       - name: Push Docker Image to ACR
-        run: docker push ${{ env.ACR_NAME }}/spring-petclinic:${{ github.sha }}
+        run: docker push ${{ env.ACR_REPO }}/spring-petclinic:${{ github.sha }}
 
       - name: Deploy to Azure AppService
         uses: azure/webapps-deploy@v2
