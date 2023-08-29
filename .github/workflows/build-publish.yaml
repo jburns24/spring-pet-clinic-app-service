@@ -40,5 +40,6 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: sping-petclinic
+          slot-name: spring-petclinic
           publish-profile: ${{ secrets.PUBLISH_PROFILE }}
           images: '${{ vars.ACR_NAME }}/spring-petclinic:${{ github.sha }}'
