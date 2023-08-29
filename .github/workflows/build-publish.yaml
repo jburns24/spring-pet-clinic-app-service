@@ -39,7 +39,7 @@ jobs:
       - name: Deploy to Azure AppService
         uses: azure/webapps-deploy@v2
         with:
-          app-name: sping-petclinic
+          app-name: spring-petclinic
           # slot-name: spring-petclinic # This was important and found in the portal
           publish-profile: ${{ secrets.PUBLISH_PROFILE }} # this was required and downloaded from portal
           images: '${{ vars.ACR_NAME }}/spring-petclinic:${{ github.sha }}'
