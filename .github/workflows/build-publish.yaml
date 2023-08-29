@@ -42,4 +42,4 @@ jobs:
           app-name: spring-petclinic
           # slot-name: spring-petclinic # This was important and found in the portal
           publish-profile: ${{ secrets.PUBLISH_PROFILE }} # this was required and downloaded from portal
-          images: '${{ vars.ACR_NAME }}/spring-petclinic:${{ github.sha }}'
+          images: '${{ env.ACR_REPO }}/spring-petclinic:${{ github.sha }}'
