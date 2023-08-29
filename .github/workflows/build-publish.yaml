@@ -41,4 +41,4 @@ jobs:
         with:
           app-name: sping-petclinic
           publish-profile: ${{ secrets.PUBLISH_PROFILE }}
-          images: '${{ env.ACR_NAME }}/spring-petclinic:${{ github.sha }}'
+          images: '${{ vars.ACR_NAME }}/spring-petclinic:${{ github.sha }}'
