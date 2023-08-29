@@ -40,4 +40,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: sping-petclinic
+          publish-profile: ${{ secrets.PUBLISH_PROFILE }}
           images: '${{ env.ACR_NAME }}/spring-petclinic:${{ github.sha }}'
